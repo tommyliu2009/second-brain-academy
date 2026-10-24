@@ -12,175 +12,199 @@
 <meta property="og:description" content="以AI工作流落地，推動企業轉型">
 <meta property="og:image" content="https://web19.subsidyking.tw/poster.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0b1a33;--navy2:#0f2445;--ink:#071226;--gold:#d8b46a;--gold2:#f3dfa8;--gold3:#a9823e;--text:#e6ebf3;--mute:#9fb0c8;
---gg:linear-gradient(135deg,#f6e3ae 0%,#d8b46a 45%,#a9823e 100%)}
+:root{--bg:#fbfcfe;--fg:#0f1c2e;--primary:#1c4f9c;--primary-soft:#e3ecfa;--surface:#f1f5fa;--muted:#5a6475;--border:#d7dfea;--border2:#e6ebf2;--navy:#020618;--navy2:#0f172b;--amber:#f59e0b;--r:8px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;font-weight:400;background:var(--ink);color:var(--text);line-height:1.95;letter-spacing:.02em}
-h1,h2,h3,.serif{font-family:"Noto Serif TC","Songti TC",serif}
-a{color:var(--gold2);text-decoration:none}
-.gold{background:var(--gg);-webkit-background-clip:text;background-clip:text;color:transparent}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+body{margin:0;font-family:"Inter","Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;background:var(--bg);color:var(--fg);line-height:1.85;-webkit-font-smoothing:antialiased}
+a{color:var(--primary);text-decoration:none}
+.wrap{max-width:1152px;margin:0 auto;padding:0 24px}
+.mono{font-family:"Geist Mono",ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.04em}
+/* header */
+.nav{position:sticky;top:0;z-index:30;background:rgba(251,252,254,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border2)}
+.nav .wrap{display:flex;align-items:center;gap:28px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--fg);font-size:16px}
+.logo{width:30px;height:30px;border-radius:7px;background:var(--primary);display:grid;place-items:center}
+.logo svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round}
+.links{display:flex;gap:28px;margin:0 auto;font-size:14px;font-weight:500}
+.links a{color:var(--muted)}.links a:hover{color:var(--primary)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--primary);color:#fff;font-weight:600;font-size:15px;padding:12px 22px;border-radius:var(--r);box-shadow:0 1px 2px rgba(15,28,46,.12);transition:background .2s}
+.btn:hover{background:#163f7e}
+.btn.sm{font-size:13px;padding:7px 14px}
+.btn.line{background:#fff;color:var(--fg);border:1px solid var(--border);box-shadow:none}.btn.line:hover{border-color:var(--primary);color:var(--primary)}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
 /* hero */
-.hero{position:relative;min-height:92vh;display:flex;align-items:center;background:#06101f url(hero.webp) right center/cover no-repeat;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,16,31,.96) 0%,rgba(6,16,31,.75) 42%,rgba(6,16,31,0) 75%)}
-.hero .wrap{position:relative;width:100%;padding-top:90px;padding-bottom:70px}
-.eyebrow{display:inline-block;border:1px solid rgba(216,180,106,.55);color:var(--gold2);padding:4px 16px;border-radius:30px;font-size:13px;letter-spacing:.3em}
-.hero h1{font-size:clamp(34px,6vw,68px);font-weight:900;line-height:1.25;margin:22px 0 10px;letter-spacing:.06em}
-.hero h1 span{display:block;font-size:.5em;font-weight:600;color:var(--gold2);letter-spacing:.35em;margin-top:8px}
-.hero .sub{font-family:"Noto Serif TC",serif;font-size:clamp(18px,2.4vw,26px);color:#fff;margin:0 0 26px}
-.hero p.lead{max-width:560px;color:#cfd8e6;font-weight:300}
-.ad{position:absolute;top:22px;right:24px;z-index:3;text-align:right;font-size:13px;line-height:1.6;color:var(--gold2);background:rgba(11,26,51,.55);backdrop-filter:blur(6px);border:1px solid rgba(216,180,106,.35);padding:10px 16px;border-radius:10px}
-.btn{display:inline-block;background:var(--gg);color:#1a1205;font-weight:600;padding:14px 34px;border-radius:40px;box-shadow:0 8px 30px rgba(216,180,106,.3);letter-spacing:.1em;margin-top:18px}
-.btn.ghost{background:transparent;color:var(--gold2);border:1px solid var(--gold);box-shadow:none;margin-left:10px}
+.hero{background:var(--surface);border-bottom:1px solid var(--border)}
+.hero .wrap{padding-top:72px;padding-bottom:80px}
+.htop{display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start}
+.label{font-size:13px;font-weight:600;color:var(--primary)}
+.hero h1{font-size:clamp(36px,5.4vw,56px);font-weight:900;line-height:1.2;margin:14px 0 0;letter-spacing:.02em}
+.hero h1 span{display:block;font-size:.46em;font-weight:700;color:var(--primary);letter-spacing:.12em;margin-top:10px}
+.sub{font-size:clamp(19px,2.2vw,24px);font-weight:700;margin:22px 0 10px}
+.lead{max-width:640px;color:var(--muted);font-size:17px;margin:0}
+.acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.ad{background:#fff;border:1px solid var(--border);border-left:3px solid var(--primary);border-radius:var(--r);padding:12px 18px;font-size:13px;line-height:1.75;color:var(--fg);box-shadow:0 1px 2px rgba(15,28,46,.05);margin-top:34px;white-space:nowrap}
+.ad div:first-child{font-weight:700}
+.heroimg{margin-top:48px;border-radius:4px;overflow:hidden;border:1px solid var(--border);aspect-ratio:16/7}
+.heroimg img{width:100%;height:100%;object-fit:cover;display:block}
 /* sections */
-section{padding:110px 0;position:relative}
-section.alt{background:linear-gradient(180deg,var(--navy) 0%,var(--ink) 100%)}
-.kicker{color:var(--gold);font-size:13px;letter-spacing:.4em;text-align:center;display:block}
-h2{font-size:clamp(28px,3.6vw,42px);text-align:center;margin:10px 0 14px;font-weight:600;letter-spacing:.12em}
-.line{width:70px;height:1px;background:var(--gg);margin:0 auto 40px}
-h3{font-weight:600;color:var(--gold2)}
-.prose{max-width:780px;margin:0 auto;font-size:17px;color:#d3dbe8;font-weight:300}
-.glass{background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(216,180,106,.35);border-radius:18px;backdrop-filter:blur(8px);box-shadow:0 20px 50px rgba(0,0,0,.35)}
-.split{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.split img{width:100%;border-radius:18px;border:1px solid rgba(216,180,106,.3)}
-.grid4{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
-.item{padding:22px;display:flex;gap:14px;align-items:flex-start;transition:transform .4s,border-color .4s}
-.item:hover{transform:translateY(-4px);border-color:var(--gold)}
-.ic{flex:0 0 46px;height:46px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--gold);background:rgba(216,180,106,.08)}
-.ic svg{width:22px;height:22px;stroke:var(--gold2);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-/* timeline */
-.tl{display:grid;grid-template-columns:repeat(4,1fr);position:relative;margin:30px 0 40px}
-.tl:before{content:"";position:absolute;top:44px;left:12%;right:12%;height:1px;background:var(--gg);opacity:.7}
-.st{text-align:center;position:relative}
-.dot{width:88px;height:88px;margin:0 auto 16px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#1d3a6b,#0b1a33);border:1px solid var(--gold);box-shadow:0 0 30px rgba(216,180,106,.25);font-family:"Noto Serif TC",serif;font-size:26px;font-weight:900}
-.st h3{margin:0;font-size:20px}
-/* benefits */
-.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.card{padding:34px 24px;text-align:center;transition:transform .4s}
-.card:hover{transform:translateY(-6px)}
-.card .ic{margin:0 auto 18px;width:64px;height:64px;flex:none}
-.card .ic svg{width:30px;height:30px}
-.card h3{font-size:20px;margin:0 0 10px}
-.card p{margin:0;color:#c9d3e2;font-weight:300}
+section{padding:96px 0;border-bottom:1px solid var(--border2)}
+section.s{background:var(--surface)}
+.kicker{font-size:12px;color:var(--muted);display:block}
+.kicker b{color:var(--primary);font-weight:600}
+h2{font-size:clamp(28px,3.4vw,38px);font-weight:700;line-height:1.35;margin:10px 0 18px}
+h3{font-size:19px;font-weight:700;margin:0 0 6px}
+.prose{max-width:760px;font-size:17px;color:#334155}
+.intro{font-size:clamp(18px,2vw,21px);line-height:1.9;color:var(--fg);max-width:900px;margin:0;font-weight:500}
+.intro:before{content:"";display:block;width:40px;height:3px;background:var(--primary);margin-bottom:22px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.panel{background:#fff;border:1px solid var(--border);border-radius:var(--r);box-shadow:0 1px 2px rgba(15,28,46,.04)}
+.grid4{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.item{padding:16px 18px;display:flex;gap:12px;align-items:center;font-weight:500;transition:border-color .2s,transform .2s}
+.item:hover{border-color:var(--primary);transform:translateY(-2px)}
+.ic{flex:0 0 40px;width:40px;height:40px;border-radius:var(--r);display:grid;place-items:center;background:var(--primary-soft)}
+.ic svg{width:20px;height:20px;stroke:var(--primary);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.diagram{padding:20px;background:#fff linear-gradient(var(--border2) 1px,transparent 1px) 0 0/100% 48px}
+.diagram svg{width:100%;height:auto;display:block}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:var(--r);background:#fff;margin:34px 0 30px;overflow:hidden}
+.st{padding:28px 26px;border-right:1px solid var(--border2)}.st:last-child{border-right:0}
+.st .n{font-size:13px;color:var(--primary);font-weight:600}
+.st h3{margin-top:30px}
+.st .bar{height:3px;background:var(--border2);margin-top:16px;border-radius:2px;overflow:hidden}.st .bar i{display:block;height:100%;background:var(--primary)}
+/* subsidy */
+.callout{display:flex;gap:24px;align-items:flex-start;padding:32px;border-left:3px solid var(--primary)}
+.callout .ic{flex:0 0 56px;width:56px;height:56px}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:30px}
+.card{padding:26px 22px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--primary);transform:translateY(-3px)}
+.card .n{font-size:12px;color:var(--muted);display:block;margin:18px 0 6px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.wide{margin-top:40px;border-radius:var(--r);overflow:hidden;border:1px solid var(--border);aspect-ratio:16/7}
+.wide img{width:100%;height:100%;object-fit:cover;display:block}
 /* price */
-.price{max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:hidden}
-.price .l{padding:46px 40px;border-right:1px solid rgba(216,180,106,.25)}
-.price .r{padding:0;background:#06101f}
-.price .r img{width:100%;height:100%;object-fit:cover;display:block}
-.amt{font-family:"Noto Serif TC",serif;font-size:clamp(40px,6vw,60px);font-weight:900;line-height:1.1;margin:6px 0 4px}
-.amt small{font-size:.38em;color:var(--gold2);font-weight:600;margin-right:6px}
-.rows div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(216,180,106,.2)}
-.rows span:first-child{color:var(--gold)}
-.cta{text-align:center;padding:120px 24px;background:radial-gradient(ellipse at center,#163058 0%,var(--ink) 70%)}
-.cta .big{font-family:"Noto Serif TC",serif;font-size:clamp(24px,3.4vw,38px);font-weight:600;margin:0 0 10px}
-.addr{color:var(--mute);margin-top:6px}
-.disc{font-size:12px;color:#8193ad;padding:30px 0;line-height:1.8}
-footer{text-align:center;font-size:12px;color:#6f819c;padding:24px;border-top:1px solid rgba(216,180,106,.15)}
+.price{display:grid;grid-template-columns:1.1fr .9fr;overflow:hidden;margin-top:30px}
+.price .l{padding:40px}
+.price .r{background:var(--surface);border-left:1px solid var(--border);padding:24px;display:flex;align-items:center}
+.price .r img{width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--border);box-shadow:0 10px 30px rgba(15,28,46,.12)}
+.amt{font-size:clamp(38px,5vw,52px);font-weight:800;line-height:1.1;margin:8px 0 4px;color:var(--fg)}
+.amt small{font-size:.36em;color:var(--muted);font-weight:600;margin-right:6px}
+.rows{margin-top:24px;border-top:1px solid var(--border2)}
+.rows div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--border2);font-size:15px}
+.rows span:first-child{color:var(--muted)}.rows span:last-child{font-weight:600}
+/* cta */
+.cta{background:var(--navy2);color:#e2e8f0;text-align:center;padding:96px 24px}
+.cta .big{font-size:clamp(24px,3.2vw,34px);font-weight:700;color:#fff;margin:0 0 26px;line-height:1.5}
+.cta .btn{background:#fff;color:var(--navy2)}
+.addr{color:#94a3b8;margin:22px 0 0}
+.slogan{margin:26px 0 0;color:#cbd5e1}
+.disc{font-size:12px;color:#94a3b8;padding:28px 0;line-height:1.8;margin:0}
+.foot{background:var(--navy)}
+footer{font-size:12px;color:#64748b;padding:20px 24px;text-align:center;border-top:1px solid rgba(255,255,255,.08)}
 .sticky{display:none}
-.rv{opacity:0;transform:translateY(28px);transition:opacity 1s ease,transform 1s ease}.rv.in{opacity:1;transform:none}
-@media(max-width:860px){
-.hero{min-height:auto;background-image:url(hero_m.webp);background-position:center top;background-size:cover}
-.hero:before{background:linear-gradient(180deg,rgba(6,16,31,.35) 0%,rgba(6,16,31,.85) 55%,rgba(6,16,31,.98) 100%)}
-.hero .wrap{padding-top:260px;padding-bottom:50px}
-.ad{position:static;text-align:left;margin:4px 0 22px;display:inline-block}
-.btn.ghost{display:none}
-section{padding:72px 0}
-.split,.price{grid-template-columns:1fr}.split img{order:-1}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.rv.in{opacity:1;transform:none}
+@media(max-width:900px){
+.links,.nav .btn{display:none}
+.htop{grid-template-columns:1fr;gap:0}
+.ad{margin-top:18px;display:inline-block}
+.hero .wrap{padding-top:44px;padding-bottom:48px}
+.heroimg{margin-top:32px;aspect-ratio:4/3}
+section{padding:64px 0}
+.split,.price{grid-template-columns:1fr}
 .grid4{grid-template-columns:1fr}
-.cards{grid-template-columns:1fr 1fr;gap:12px}.card{padding:24px 14px}
-.tl{grid-template-columns:1fr;gap:0;margin-left:10px}
-.tl:before{top:20px;bottom:20px;left:30px;right:auto;width:1px;height:auto}
-.st{display:flex;align-items:center;gap:18px;text-align:left;padding:12px 0}
-.dot{width:60px;height:60px;font-size:20px;margin:0;flex:none}
-.price .l{border-right:0;padding:32px 24px}
-.sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:20;justify-content:space-between;align-items:center;padding:12px 18px;background:rgba(7,18,38,.92);backdrop-filter:blur(8px);border-top:1px solid rgba(216,180,106,.4)}
-.sticky b{font-family:"Noto Serif TC",serif}.sticky a{background:var(--gg);color:#1a1205;padding:8px 18px;border-radius:30px;font-weight:600;font-size:14px}
-body{padding-bottom:64px}}
-@media(max-width:420px){.cards{grid-template-columns:1fr}}
+.steps{grid-template-columns:1fr 1fr}.st:nth-child(2){border-right:0}.st:nth-child(-n+2){border-bottom:1px solid var(--border2)}
+.st h3{margin-top:14px}
+.cards{grid-template-columns:1fr 1fr;gap:12px}
+.callout{flex-direction:column;padding:24px}
+.price .l{padding:28px 22px}.price .r{border-left:0;border-top:1px solid var(--border)}
+.wide{aspect-ratio:4/3}
+.sticky{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;justify-content:space-between;align-items:center;padding:10px 16px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--border);box-shadow:0 -4px 16px rgba(15,28,46,.06)}
+.sticky b{font-size:15px}.sticky a{background:var(--primary);color:#fff;padding:8px 16px;border-radius:var(--r);font-weight:600;font-size:14px}
+body{padding-bottom:62px}}
+@media(max-width:440px){.cards{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.st{border-right:0!important;border-bottom:1px solid var(--border2)}.st:last-child{border-bottom:0}}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<header class="hero">
-<div class="wrap">
-<span class="eyebrow">SECOND BRAIN ACADEMY</span>
-<h1 class="gold">第二大腦學院<span>年度會員招募</span></h1>
+<nav class="nav"><div class="wrap">
+<a class="brand" href="#top"><span class="logo"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="1.6"/><circle cx="19" cy="6" r="1.6"/><circle cx="5" cy="18" r="1.6"/><circle cx="19" cy="18" r="1.6"/><path d="M6.3 7l3.6 3M17.7 7l-3.6 3M6.3 17l3.6-3M17.7 17l-3.6-3"/></svg></span>第二大腦學院</a>
+<div class="links"><a href="#features">方案特色</a><a href="#process">導入流程</a><a href="#subsidy">串接政府補助資源</a><a href="#member">年度會員權益</a><a href="#join">費用與報名</a></div>
+<a class="btn sm" href="#join">請洽曾祕書</a>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+<div class="htop">
+<div>
+<span class="label mono">SECOND BRAIN ACADEMY</span>
+<h1>第二大腦學院<span>年度會員招募</span></h1>
+</div>
 <div class="ad"><div>仁禾管理顧問</div><div><a href="mailto:renhe74123@gmail.com">renhe74123@gmail.com</a></div><div><a href="https://line.me/R/ti/p/@891tcxhu" target="_blank" rel="noopener">LINE 官方帳號：@891tcxhu</a></div></div>
+</div>
 <p class="sub">以AI工作流落地，推動企業轉型</p>
 <p class="lead">面對AI時代，企業不必一次改變所有流程。從日常工作出發，找出耗時、重複或容易出錯的環節，逐步導入AI，建立團隊真正用得上的工作流。</p>
-<a class="btn" href="#join">報名洽詢｜請洽曾祕書</a><a class="btn ghost" href="#features">了解方案</a>
-</div>
-</header>
+<div class="acts"><a class="btn" href="#join">報名洽詢｜請洽曾祕書</a><a class="btn line" href="#features">了解方案</a></div>
+<div class="heroimg"><img src="hero3.webp" alt="企業團隊導入AI工作流" width="1024" height="576" fetchpriority="high"></div>
+</div></header>
 
-<section class="alt">
-<div class="wrap rv"><p class="prose" style="text-align:center">第二大腦學院招募大台中、台北地區的企業主、企業二代與高階主管，不限產業。透過實作課程、一對一輔導、政府補助申請輔導與跨產業交流，協助企業將實際需求轉化為可執行的AI導入計畫。</p></div>
-</section>
+<section><div class="wrap rv"><p class="intro">第二大腦學院招募大台中、台北地區的企業主、企業二代與高階主管，不限產業。透過實作課程、一對一輔導、政府補助申請輔導與跨產業交流，協助企業將實際需求轉化為可執行的AI導入計畫。</p></div></section>
 
-<section id="features">
-<div class="wrap">
-<span class="kicker rv">FEATURES</span><h2 class="gold rv">方案特色</h2><div class="line"></div>
+<section class="s" id="features"><div class="wrap">
 <div class="split">
 <div class="rv">
-<h3 class="serif" style="font-size:26px;margin-top:0">從企業問題出發，建立AI工作流</h3>
-<p>應用範圍包括：</p>
+<span class="kicker mono"><b>01</b> / FEATURES</span><h2>方案特色</h2>
+<h3>從企業問題出發，建立AI工作流</h3>
+<p style="color:var(--muted);margin:4px 0 0">應用範圍包括：</p>
 <div class="grid4">
-<div class="item glass"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l15-6v14L3 13z"/><path d="M7 13v5h3"/></svg></div><div>行銷內容與客戶追蹤</div></div>
-<div class="item glass"><div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><div>報價、接單與業務流程</div></div>
-<div class="item glass"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h6a2 2 0 012 2v13a2 2 0 00-2-2H4zM20 5h-6a2 2 0 00-2 2v13a2 2 0 012-2h6z"/></svg></div><div>行政作業與內部知識管理</div></div>
-<div class="item glass"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div><div>其他耗時、重複或容易出錯的工作</div></div>
+<div class="item panel"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l15-6v14L3 13z"/><path d="M7 13v5h3"/></svg></div><div>行銷內容與客戶追蹤</div></div>
+<div class="item panel"><div class="ic"><svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div><div>報價、接單與業務流程</div></div>
+<div class="item panel"><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 5h6a2 2 0 012 2v13a2 2 0 00-2-2H4zM20 5h-6a2 2 0 00-2 2v13a2 2 0 012-2h6z"/></svg></div><div>行政作業與內部知識管理</div></div>
+<div class="item panel"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></div><div>其他耗時、重複或容易出錯的工作</div></div>
 </div>
 </div>
-<img class="rv" src="workflow.webp" alt="AI工作流示意圖" width="1024" height="768" loading="lazy">
+<div class="panel diagram rv"><svg viewBox="0 0 440 300" role="img" aria-label="AI工作流示意圖">
+<g stroke="#1c4f9c" stroke-opacity=".35" stroke-width="1.5" fill="none" stroke-dasharray="4 4"><path d="M95 84 L220 150 L345 84"/><path d="M95 216 L220 150 L345 216"/></g>
+<g transform="translate(20,57)"><rect width="150" height="54" rx="8" fill="#fff" stroke="#d7dfea"/><circle cx="16" cy="27" r="3" fill="#1c4f9c"/><g transform="translate(28,15) scale(1)" stroke="#1c4f9c" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l15-6v14L3 13z"/><path d="M7 13v5h3"/></g><text x="62" y="32" font-size="14" font-weight="600" fill="#0f1c2e" font-family="Noto Sans TC,sans-serif">行銷</text></g><g transform="translate(270,57)"><rect width="150" height="54" rx="8" fill="#fff" stroke="#d7dfea"/><circle cx="16" cy="27" r="3" fill="#1c4f9c"/><g transform="translate(28,15) scale(1)" stroke="#1c4f9c" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></g><text x="62" y="32" font-size="14" font-weight="600" fill="#0f1c2e" font-family="Noto Sans TC,sans-serif">業務</text></g><g transform="translate(20,189)"><rect width="150" height="54" rx="8" fill="#fff" stroke="#d7dfea"/><circle cx="16" cy="27" r="3" fill="#1c4f9c"/><g transform="translate(28,15) scale(1)" stroke="#1c4f9c" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h6a2 2 0 012 2v13a2 2 0 00-2-2H4zM20 5h-6a2 2 0 00-2 2v13a2 2 0 012-2h6z"/></g><text x="62" y="32" font-size="14" font-weight="600" fill="#0f1c2e" font-family="Noto Sans TC,sans-serif">行政</text></g><g transform="translate(270,189)"><rect width="150" height="54" rx="8" fill="#fff" stroke="#d7dfea"/><circle cx="16" cy="27" r="3" fill="#1c4f9c"/><g transform="translate(28,15) scale(1)" stroke="#1c4f9c" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></g><text x="62" y="32" font-size="14" font-weight="600" fill="#0f1c2e" font-family="Noto Sans TC,sans-serif">知識</text></g>
+<circle cx="220" cy="150" r="34" fill="#e3ecfa" stroke="#1c4f9c" stroke-opacity=".4"/><text x="220" y="156" text-anchor="middle" font-size="17" font-weight="700" fill="#1c4f9c" font-family="Inter,sans-serif">AI</text></svg></div>
 </div>
-</div>
-</section>
+</div></section>
 
-<section class="alt">
-<div class="wrap">
-<span class="kicker rv">PROCESS</span><h2 class="gold rv">導入流程</h2><div class="line"></div>
-<div class="tl rv">
-<div class="st"><div class="dot gold">01</div><h3>診斷流程</h3></div>
-<div class="st"><div class="dot gold">02</div><h3>設定目標</h3></div>
-<div class="st"><div class="dot gold">03</div><h3>實作導入</h3></div>
-<div class="st"><div class="dot gold">04</div><h3>驗證成果</h3></div>
+<section id="process"><div class="wrap">
+<span class="kicker mono rv"><b>02</b> / PROCESS</span><h2 class="rv">導入流程</h2>
+<div class="steps rv">
+<div class="st"><span class="n mono">01</span><h3>診斷流程</h3><div class="bar"><i style="width:25%"></i></div></div>
+<div class="st"><span class="n mono">02</span><h3>設定目標</h3><div class="bar"><i style="width:50%"></i></div></div>
+<div class="st"><span class="n mono">03</span><h3>實作導入</h3><div class="bar"><i style="width:75%"></i></div></div>
+<div class="st"><span class="n mono">04</span><h3>驗證成果</h3><div class="bar"><i style="width:100%"></i></div></div>
 </div>
-<p class="prose rv" style="text-align:center">依企業需求與執行條件分階段推進，追蹤工時、重工率與服務效率等改善成果，讓學習直接連結企業營運。</p>
-</div>
-</section>
+<p class="prose rv">依企業需求與執行條件分階段推進，追蹤工時、重工率與服務效率等改善成果，讓學習直接連結企業營運。</p>
+</div></section>
 
-<section>
-<div class="wrap">
-<span class="kicker rv">SUBSIDY</span><h2 class="gold rv">串接政府補助資源</h2><div class="line"></div>
-<div class="glass rv" style="max-width:860px;margin:0 auto;padding:40px;display:flex;gap:26px;align-items:center">
-<div class="ic" style="flex:0 0 72px;height:72px"><svg viewBox="0 0 24 24" style="width:34px;height:34px"><path d="M3 10l9-6 9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 21h18"/></svg></div>
-<p style="margin:0;font-size:17px;font-weight:300">協助企業盤點需求、評估適合的政府補助機會，並提供申請規劃與文件準備方向，讓AI導入計畫與資源運用相互配合。</p>
+<section class="s" id="subsidy"><div class="wrap">
+<span class="kicker mono rv"><b>03</b> / SUBSIDY</span><h2 class="rv">串接政府補助資源</h2>
+<div class="panel callout rv" style="margin-top:26px"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9 10v8M15 10v8M19 10v8M3 21h18"/></svg></div>
+<p style="margin:0;font-size:17px">協助企業盤點需求、評估適合的政府補助機會，並提供申請規劃與文件準備方向，讓AI導入計畫與資源運用相互配合。</p>
 </div>
-</div>
-</section>
+</div></section>
 
-<section class="alt">
-<div class="wrap">
-<span class="kicker rv">MEMBERSHIP</span><h2 class="gold rv">年度會員權益</h2><div class="line"></div>
+<section id="member"><div class="wrap">
+<span class="kicker mono rv"><b>04</b> / MEMBERSHIP</span><h2 class="rv">年度會員權益</h2>
 <div class="cards">
-<div class="card glass rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M8 9l3 2-3 2"/></svg></div><h3>12次實作課程</h3><p>聚焦AI應用與企業落地。</p></div>
-<div class="card glass rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg></div><h3>12小時一對一輔導</h3><p>針對企業實際問題，協助規劃與推進。</p></div>
-<div class="card glass rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13l2 2 4-4"/></svg></div><h3>政府補助申請輔導</h3><p>協助評估機會、釐清資格與準備方向。</p></div>
-<div class="card glass rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><circle cx="12" cy="12" r="2"/><path d="M12 7v3M10.5 13.5L6.5 15.8M13.5 13.5l4 2.3"/></svg></div><h3>第二大腦俱樂部交流</h3><p>跨產業分享經驗，探索合作機會。</p></div>
+<div class="card panel rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M8 9l3 2-3 2"/></svg></div><span class="n mono">01 / BENEFIT</span><h3>12次實作課程</h3><p>聚焦AI應用與企業落地。</p></div>
+<div class="card panel rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 20c0-3 2.5-5 5-5s5 2 5 5M11 20c0-3 2.5-5 5-5s5 2 5 5"/></svg></div><span class="n mono">02 / BENEFIT</span><h3>12小時一對一輔導</h3><p>針對企業實際問題，協助規劃與推進。</p></div>
+<div class="card panel rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13l2 2 4-4"/></svg></div><span class="n mono">03 / BENEFIT</span><h3>政府補助申請輔導</h3><p>協助評估機會、釐清資格與準備方向。</p></div>
+<div class="card panel rv"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="17" r="2"/><circle cx="19" cy="17" r="2"/><circle cx="12" cy="12" r="2"/><path d="M12 7v3M10.5 13.5L6.5 15.8M13.5 13.5l4 2.3"/></svg></div><span class="n mono">04 / BENEFIT</span><h3>第二大腦俱樂部交流</h3><p>跨產業分享經驗，探索合作機會。</p></div>
 </div>
-<img class="rv" src="club.webp" alt="跨產業交流示意圖" width="1024" height="768" loading="lazy" style="display:block;width:100%;max-width:760px;margin:50px auto 0;border-radius:18px;border:1px solid rgba(216,180,106,.3)">
-</div>
-</section>
+<div class="wide rv"><img src="club3.webp" alt="跨產業交流示意圖" width="1024" height="768" loading="lazy"></div>
+</div></section>
 
-<section id="join">
-<div class="wrap">
-<span class="kicker rv">ENROLLMENT</span><h2 class="gold rv">費用與報名</h2><div class="line"></div>
-<div class="price glass rv">
+<section class="s" id="join"><div class="wrap">
+<span class="kicker mono rv"><b>05</b> / ENROLLMENT</span><h2 class="rv">費用與報名</h2>
+<div class="price panel rv">
 <div class="l">
-<div style="color:var(--gold2);letter-spacing:.2em">年度會員費</div>
-<div class="amt gold"><small>新臺幣</small>68,000元</div>
-<div class="rows" style="margin-top:22px">
+<div class="label">年度會員費</div>
+<div class="amt"><small>新臺幣</small>68,000元</div>
+<div class="rows">
 <div><span>年度會員費</span><span>新臺幣68,000元</span></div>
 <div><span>招生地區</span><span>大台中、台北</span></div>
 <div><span>報名洽詢</span><span>曾祕書</span></div>
@@ -188,22 +212,21 @@ body{padding-bottom:64px}}
 </div>
 <div class="r"><img src="poster.webp" alt="第二大腦學院年度會員招募海報" width="1024" height="1536" loading="lazy"></div>
 </div>
-<div class="prose rv" style="margin-top:50px">
+<div class="prose rv" style="margin-top:40px">
 <p>如果您的企業正面臨流程耗時、資料分散、重複作業多，或希望由企業主、企業二代與高階主管帶領團隊開始AI導入，歡迎優先洽詢。特別適合已有明確改善需求，並願意投入時間將AI應用落實於日常營運的企業。</p>
 <p>請直接聯繫曾祕書，洽詢年度會員方案、課程與輔導安排，以及目前報名名額與受理期限。由於招生地區與年度方案皆有規劃，建議有意加入的企業及早確認，避免錯過適合的參與安排。</p>
 </div>
-</div>
-</section>
+</div></section>
 
 <div class="cta">
-<p class="big gold rv">帶著公司的真實問題加入，讓AI走進日常工作。</p>
+<p class="big rv">帶著公司的真實問題加入，讓AI走進日常工作。</p>
 <div class="btn rv">報名洽詢｜請洽曾祕書</div>
 <p class="addr rv">地址：台中市台灣大道二段2號20樓</p>
-<p class="serif rv" style="margin-top:30px;color:var(--gold2)">第二大腦學院——以AI工作流落地，陪伴百工百業推動企業轉型。</p>
+<p class="slogan rv">第二大腦學院——以AI工作流落地，陪伴百工百業推動企業轉型。</p>
 </div>
-<div class="wrap"><p class="disc">＊政府補助資格、時程、補助項目及自籌款依各計畫公告與審查結果為準，不保證核准；會員費不代表可獲補助。客製系統開發、第三方工具及系統串接等費用，依需求另行評估報價。</p></div>
-<footer>© 第二大腦學院</footer>
-<div class="sticky"><b class="gold">年度會員 NT$68,000</b><a href="#join">請洽曾祕書</a></div>
+<div class="foot"><div class="wrap"><p class="disc">＊政府補助資格、時程、補助項目及自籌款依各計畫公告與審查結果為準，不保證核准；會員費不代表可獲補助。客製系統開發、第三方工具及系統串接等費用，依需求另行評估報價。</p></div>
+<footer>© 第二大腦學院</footer></div>
+<div class="sticky"><b>年度會員 NT$68,000</b><a href="#join">請洽曾祕書</a></div>
 <script>
 (function(){var els=document.querySelectorAll('.rv');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})})();
