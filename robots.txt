@@ -55,4 +55,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://web19.subsidyking.tw/sitemap.xml
+Sitemap: https://2ndbrain.subsidyking.tw/sitemap.xml
