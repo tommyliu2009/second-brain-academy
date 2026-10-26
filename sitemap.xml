@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://www.2ndbrain.tw/</loc><lastmod>2026-10-24</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+<url><loc>https://www.2ndbrain.tw/llms-full.txt</loc><lastmod>2026-10-26</lastmod><priority>0.4</priority></url>
 <url><loc>https://www.2ndbrain.tw/llms.txt</loc><lastmod>2026-10-24</lastmod><priority>0.5</priority></url>
+<url><loc>https://www.2ndbrain.tw/cases/manufacturing.html</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://www.2ndbrain.tw/cases/service.html</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://www.2ndbrain.tw/curriculum.html</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
+<url><loc>https://www.2ndbrain.tw/articles/ai-workflow.html</loc><lastmod>2026-10-26</lastmod><priority>0.7</priority></url>
 </urlset>

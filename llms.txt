@@ -66,3 +66,10 @@
 ## 網址
 - 首頁：https://www.2ndbrain.tw/
 - 網站地圖：https://www.2ndbrain.tw/sitemap.xml
+
+## 延伸內容
+- [情境示範：製造業](https://www.2ndbrain.tw/cases/manufacturing.html)
+- [情境示範：服務業與貿易](https://www.2ndbrain.tw/cases/service.html)
+- [課程大綱](https://www.2ndbrain.tw/curriculum.html)
+- [AI工作流導入指南](https://www.2ndbrain.tw/articles/ai-workflow.html)
+- [完整內容 llms-full.txt](https://www.2ndbrain.tw/llms-full.txt)
