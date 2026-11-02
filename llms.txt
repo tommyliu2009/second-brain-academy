@@ -73,3 +73,12 @@
 - [課程大綱](https://www.2ndbrain.tw/curriculum.html)
 - [AI工作流導入指南](https://www.2ndbrain.tw/articles/ai-workflow.html)
 - [完整內容 llms-full.txt](https://www.2ndbrain.tw/llms-full.txt)
+
+## 延伸閱讀（自動）
+- [情境示範：製造業：情境示範：傳統製造業用 AI 工作流處理報價與接單](https://www.2ndbrain.tw/cases/manufacturing.html)
+- [情境示範：服務業與貿易：情境示範：服務業與貿易商用 AI 整理客戶追蹤與行銷內容（虛構示範，非真實客戶）](https://www.2ndbrain.tw/cases/service.html)
+- [課程大綱：第二大腦學院年度會員課程與輔導概覽](https://www.2ndbrain.tw/curriculum.html)
+- [AI工作流導入指南：什麼是 AI 工作流？傳統企業從一個痛點開始的導入指南](https://www.2ndbrain.tw/articles/ai-workflow.html)
+- [範例情境：零售門市：範例情境：零售門市用 AI 工作流處理商品資料、補貨提醒與顧客回覆](https://www.2ndbrain.tw/cases/retail.html)
+- [範例情境：農業經營：範例情境：虛構農場用 AI 工作流整理田間紀錄、出貨與文件](https://www.2ndbrain.tw/cases/agriculture.html)
+- [AI工作流實作檢核清單：AI工作流實作步驟：從挑選第一個流程到驗證成果的檢核清單](https://www.2ndbrain.tw/articles/ai-workflow-checklist.html)
